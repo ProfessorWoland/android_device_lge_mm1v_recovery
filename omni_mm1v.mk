@@ -20,3 +20,16 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, device/lge/mm1v/full_mm1v.mk)
 
 PRODUCT_NAME := omni_mm1v
+
+PRODUCT_PACKAGES += \
+    fstab.mt6735 \
+    init.mt6735.rc \
+    init.mt6735.modem.rc \
+    init.mt6735.usb.rc \
+    meta_init.rc \
+    meta_init.modem.rc \
+    meta_init.project.rc \
+    factory_init.rc \
+    factory_init.usb.rc \
+    factory_init.project.rc \
+    ueventd.mt6735.rc
