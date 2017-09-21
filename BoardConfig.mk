@@ -18,11 +18,14 @@ DEVICE_PATH := device/lge/mm1v
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6735
-#TARGET_BOARD_PLATFORM_GPU := mali-T720
+TARGET_BOARD_PLATFORM_GPU := mali-T720
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MM1V
 TARGET_NO_BOOTLOADER := true
+
+#we'll see what happens here
+TARGET_TRANSPARENT_COMPRESSION_METHOD := lz4
 
 # Architecture
 TARGET_ARCH := arm
@@ -59,5 +62,7 @@ TARGET_PREBUILT_KERNEL := device/lge/mm1v/recovery/kernel
 TW_THEME := portrait_hdpi
 #TW_SCREEN_BLANK_ON_BOOT := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_INCLUDE_CRYPTO := true
+#TW_INCLUDE_CRYPTO := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/twrp.fstab
+TW_EXCLUDE_SUPERSU := true
+RECOVERY_VARIANT := twrp
