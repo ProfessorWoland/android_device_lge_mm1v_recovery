@@ -5,7 +5,7 @@ $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) \
                 $(recovery_ramdisk) \
                 $(recovery_kernel)
         @echo ----- Compressing recovery ramdisk with lz4 ------
-        $(LZ4_BIN)  -9 $(recovery_uncompressed_ramdisk)
+        $(LZ4_BIN) $(recovery_uncompressed_ramdisk)
         $(hide) cp $(recovery_uncompressed_ramdisk).lz4 $(recovery_ramdisk)
         @echo ----- Making recovery image ------
         $(MKBOOTIMG) $(INTERNAL_RECOVERYIMAGE_ARGS) --output $@
