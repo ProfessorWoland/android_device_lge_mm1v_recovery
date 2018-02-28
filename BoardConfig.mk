@@ -15,7 +15,7 @@
 #
 
 #firs need to define this in /build/core/config.mk otherwise is useless
-BOARD_NEEDS_LZ4_MINIGZIP := true
+#BOARD_NEEDS_LZ4_MINIGZIP := true
 
 DEVICE_PATH := device/lge/mm1v
 
