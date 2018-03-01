@@ -15,7 +15,7 @@
 #
 
 #firs need to define this in /build/core/config.mk otherwise is useless
-BOARD_NEEDS_LZ4_MINIGZIP := true
+#BOARD_NEEDS_LZ4_MINIGZIP := true
 
 DEVICE_PATH := device/lge/mm1v
 
@@ -45,6 +45,7 @@ BOARD_KERNEL_CMDLINE = bootopt=64S3,32N2,32N2 androidboot.hardware=mm1v
 BOARD_KERNEL_BASE = 0x40000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x0e000000
+BOARD_CUSTOM_BOOTIMG_MK := device/lge/mm1v/custom_mkbootimg.mk
 
 # Power questionable???
 TARGET_POWERHAL_VARIANT := MTK
